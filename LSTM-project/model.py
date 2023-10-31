@@ -12,4 +12,6 @@ def create_model(seq_length, total_chars):
     model.add(Dense(total_chars, activation='softmax'))
     optimizer = Adam(learning_rate=0.00001)
     model.compile(loss='categorical_crossentropy', optimizer=optimizer)
+    #accuracy?
+    #model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics=['accuracy'])
     return model
