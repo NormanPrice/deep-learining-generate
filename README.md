@@ -1,2 +1,2 @@
 # deep-learining-generate
-Generative deep learnin
+Generative deep learning approach for password guessing and not only
