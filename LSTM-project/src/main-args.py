@@ -49,9 +49,10 @@ import logging
 import sys
 
 from preprocessing import load_text, create_char_mappings, vectorize_text
-from model import create_model, train_model, save_model
+from model import create_model, train_model
 from text_generator import generate_text
 from utils import save_text
+from keras.models import save_model
 
 # Configure logging
 logging.basicConfig(
@@ -69,6 +70,7 @@ def main(args):
         text = load_text(args.filename)
         char_indices, indices_char, chars = create_char_mappings(text)
         total_chars = len(chars)
+        #total_chars = 83
 
         X, y = vectorize_text(text, args.seq_length, total_chars, char_indices)
         model = create_model(args.seq_length, total_chars, 
@@ -98,8 +100,8 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Text generation script.")
-    parser.add_argument("--filename", type=str, required=True, help="Path to the text file to be processed")
-    parser.add_argument("--seq_length", type=int, default=40, help="Sequence length for training (default: 40)")
+    #mozna dodac jakies opcje do wyboru zbioru znakow treningowych
+    parser.add_argument("--filename", type=str,default='/Users/norbert/Downloads/deep-learining-generate-main/LSTM-project/data/ascii_printable_characters.txt', help="Path to the text file to be processed")
     parser.add_argument("--train_model", action="store_true", help="Flag to train the model")
     parser.add_argument("--output_path", type=str, required=True, help="Path to save the generated text")
     parser.add_argument("--pretrained_model_path", type=str, default=None, help="Path to a pre-trained model")
@@ -110,3 +112,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     main(args)
+
+
+#python3 main-args.py --seq_length 20 --output_path /Users/norbert/Downloads/deep-learining-generate-main/LSTM-project/outputs/newoutput.txt --pretrained_model_path /Users/norbert/Downloads/deep-learining-generate-main/models/model-saveLSTM-91-chars.h5  
