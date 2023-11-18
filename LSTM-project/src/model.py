@@ -101,3 +101,28 @@ def train_model(model, X, y, model_save_path):
     except Exception as e:
         logger.exception("Failed to train the model", exc_info=e)
         raise
+
+
+'''
+MODEL WITH ATTENTION MECHANISMS - TO BE TRIED
+model = Sequential()
+
+# Bidirectional LSTMs with L1 regularization
+model.add(Bidirectional(LSTM(256, input_shape=(seq_length, total_chars), kernel_regularizer=regularizers.l1(0.001))))
+model.add(Dropout(0.2))
+model.add(Bidirectional(LSTM(512, kernel_regularizer=regularizers.l1(0.001))))
+model.add(Dropout(0.2))
+model.add(Bidirectional(LSTM(512, kernel_regularizer=regularizers.l1(0.001))))
+
+# Attention layer
+model.add(AttentionLayer())
+
+# Dense layers with dropout
+model.add(Dense(128, activation='relu'))
+model.add(Dropout(0.3))
+model.add(Dense(total_chars, activation='softmax'))
+
+# Compile the model
+optimizer = Adam(learning_rate=0.0001)
+model.compile(loss='categorical_crossentropy', optimizer=optimizer)
+'''
