@@ -73,8 +73,9 @@ The configuration file includes the following values:
 
 The model is compiled with categorical crossentropy loss and an Adam optimizer with a learning rate of 0.0001.
 
-**Training parameters and funcionality**
-Parameters:
+##Training parameters and funcionality
+
+**Training Parameters:**
 
     model (Keras model): The LSTM model to be trained.
     X (array): The input data for training.
@@ -84,7 +85,7 @@ Parameters:
     batch_size (int): Batch size for training.
     model_save_path (str): The path to save the trained model.
 
-Functionality:
+**Training Functionality:**
 
     Train function implements early stopping, monitoring validation loss with a patience of 5 epochs and restoring the best weights upon stopping.
     It also uses a learning rate scheduler to reduce the learning rate by a factor of 0.97 with a patience of 3 epochs, based on validation loss, with a minimum learning rate set to 0.0001.
