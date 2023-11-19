@@ -156,14 +156,14 @@ def main(args):
     # Load and preprocess text
 
 
-    text_ascii = load_text(config.chars_path)        
-    char_indices, indices_char, chars = create_char_mappings(text_ascii)
-    total_chars = len(chars)
+    #text_ascii = load_text(config.chars_path)        
+    #char_indices, indices_char, chars = create_char_mappings(text_ascii)
+   # total_chars = len(chars)
     
-    remove_non_ascii_printable(args.filename)
+    #remove_non_ascii_printable(args.filename)
     text = load_text(args.filename)
-    #char_indices, indices_char, chars = create_char_mappings(text)
-    #total_chars = len(chars)
+    char_indices, indices_char, chars = create_char_mappings(text)
+    total_chars = len(chars)
     
     # Vectorize text
     X, y = vectorize_text(text, args.seq_length, total_chars, char_indices)
@@ -191,7 +191,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Text generation script")
-    parser.add_argument("--filename", type=str, default='/Users/norbert/Downloads/deep-learining-generate-main/LSTM-project/data/ascii_printable_characters.txt', help="Path to the text file to be processed - containing all ASCII prontable charachters")
+    parser.add_argument("--filename", type=str, required=True, help="Path to the text file to be processed")
     #parser.add_argument("--char_filename", type=str, required=True, help="Path to the text file to be processed")
     parser.add_argument("--seq_length", type=int, default=config.seq_length, help="Sequence length for training")
     parser.add_argument("--train_model", action="store_true", help="Flag to train the model")
