@@ -73,7 +73,7 @@ The configuration file includes the following values:
 
 The model is compiled with categorical crossentropy loss and an Adam optimizer with a learning rate of 0.0001.
 
-##Training parameters and funcionality
+### Training parameters and funcionality
 
 **Training Parameters:**
 
