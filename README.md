@@ -1,4 +1,3 @@
-# deep-learining-generate
 # LSTM Password Generator
 
 ## Description
