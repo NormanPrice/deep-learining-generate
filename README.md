@@ -36,7 +36,7 @@ The configuration file includes the following values:
 - `batch_size = 64`
 
 ### Model Details
-The LSTM model to be trained with default parameters is outlined as follows:
+    The LSTM model to be trained with default parameters is outlined as follows:
     Model: "sequential"
     _________________________________________________________________
      Layer (type)                Output Shape              Param #   
