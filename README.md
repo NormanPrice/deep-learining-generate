@@ -77,6 +77,11 @@ The model is compiled with categorical crossentropy loss and an Adam optimizer w
 - The `(None, 20, 256)` output shape represents the `seq_length` value (20).
 - The `(None, 96)` output shape of the last layer indicates the number of characters used to train the model (96).
 
+Due to above - in case you want to generate passwords using pre-tranied model, please ensure that you have both model file and dataset on which the model was trained - so that dimensions of the model are correct(num_chars might vary - that will cause errors).
+
+This will be worked on in the future by making sure that all models are tranied on ASCII printable charachter set.
+Sorry for the temporary inconvinience :(
+
 
 ### Training parameters and funcionality
 
