@@ -1,0 +1,167 @@
+python3 main-args.py --pretrained_model_path /Users/norbert/Downloads/deep-learining-generate-main/models/model-saveLSTM-parameters11-06.h5 --filename /Users/norbert/Downloads/deep-learining-generate-main/LSTM-project/data/10-million-password-list-top-100000.txt --output_path /Users/norbert/Downloads/deep-learining-generate-main/LSTM-project/outputs/output-19-11.txt
+83
+WARNING:absl:At this time, the v2.11+ optimizer `tf.keras.optimizers.Adam` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.Adam`.
+WARNING:absl:There is a known slowdown when using v2.11+ Keras optimizers on M1/M2 Macs. Falling back to the legacy Keras optimizer, i.e., `tf.keras.optimizers.legacy.Adam`.
+WARNING:tensorflow:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+INFO:model:Model loaded from /Users/norbert/Downloads/deep-learining-generate-main/models/model-saveLSTM-parameters11-06.h5
+Loaded model summary:
+Model: "sequential_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ lstm_6 (LSTM)               (None, 25, 256)           348160    
+                                                                 
+ lstm_7 (LSTM)               (None, 25, 512)           1574912   
+                                                                 
+ lstm_8 (LSTM)               (None, 512)               2099200   
+                                                                 
+ dropout_2 (Dropout)         (None, 512)               0         
+                                                                 
+ dense_4 (Dense)             (None, 512)               262656    
+                                                                 
+ dense_5 (Dense)             (None, 83)                42579     
+                                                                 
+=================================================================
+Total params: 4327507 (16.51 MB)
+Trainable params: 4327507 (16.51 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+/Users/norbert/Downloads/deep-learining-generate-main/LSTM-project/src/text_generator.py:52: RuntimeWarning: divide by zero encountered in log
+  preds = np.log(preds) / temperature
+INFO:utils:Text successfully saved to /Users/norbert/Downloads/deep-learining-generate-main/LSTM-project/outputs/output-19-11.txt
+guyguy
+guyana
+gunslinger
+gunny
+gundog
+gundam
+gummie
+gumboot
+gumbey
+gulliver
+guitaril
+guitar12
+guinness1
+guinner1
+guido
+guardar
+guaran
+guaster1
+gtnhfhtnhjcbr
+gthbctns
+gthtgfg
+gsvgfq
+gruyants
+grusto
+grunded
+grund
+grouper
+grouf
+groove
+gromov
+grofishgl
+gristange
+gring
+grim11
+grice1
+grenden
+greg1234
+greg11
+greeny
+GREEN
+greats
+great
+graydog
+graus
+grassy
+grassford
+grapes123
+grapes
+gran
+grannot
+granday
+goteniko
+goodlife
+goldwind
+goldady
+gohegn
+gogoliva
+gogagogo
+godslite
+goddog
+gocheboy
+globo
+glivol
+glasse
+glankbai
+glades
+gl2lncfyqkym
+GKj7d418
+gjktkmptq
+gjkjxrf
+gjkjdbyrf
+gjkmdjkjk
+gjhjkm
+gizmoe
+Gizmo
+giten
+gisbon
+girly
+girls1
+girls2
+girl11
+giraud
+giorecio
+giongo
+giodges
+gilder
+ghjcnjq
+gerbis
+gelota
+gbhtdf
+gbljhfr
+gauleund
+garbora
+gangsta
+games
+galena
+fullist
+fuckme2
+fuckmeharly
+fuckinger
+frente
+freema
+freedom2
+fred
+Freddy1
+freddog99
+fredg
+freaking
+Goat
+gnummer1
+glopos
+gigala
+getlovery
+gerty3
+gero
+geroyah
+germa
+geron
+gerlin1
+geraldin
+genover
+generic1
+general1
+Genesis1
+general12
+genero
+generic12
+gemboush
+gelania
+
+
+After comparing:
+python3 compare.py 
+Number of common words: 52
+
+52 out of 113 words in file match
