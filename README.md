@@ -81,6 +81,7 @@ Due to above - in case you want to generate passwords using pre-tranied model, p
 
 Sample error caused by mismatch in char numbers:
     `ValueError: Input 0 of layer "sequential_2" is incompatible with the layer: expected shape=(None, 25, 83), found shape=(None, 25, 81)`
+Model was tranied on 83 chars and the input for processing here is 81 -> causing mismatch
 
 This will be worked on in the future by making sure that all models are tranied on ASCII printable charachter set.
 Sorry for the temporary inconvinience :(
