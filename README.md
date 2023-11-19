@@ -79,6 +79,9 @@ The model is compiled with categorical crossentropy loss and an Adam optimizer w
 
 Due to above - in case you want to generate passwords using pre-tranied model, please ensure that you have both model file and dataset on which the model was trained - so that dimensions of the model are correct(num_chars might vary - that will cause errors).
 
+Sample error caused by mismatch in char numbers:
+    `ValueError: Input 0 of layer "sequential_2" is incompatible with the layer: expected shape=(None, 25, 83), found shape=(None, 25, 81)`
+
 This will be worked on in the future by making sure that all models are tranied on ASCII printable charachter set.
 Sorry for the temporary inconvinience :(
 
