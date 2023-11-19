@@ -62,6 +62,34 @@ The configuration file includes the following values:
     Non-trainable params: 0 (0.00 Byte)
     _________________________________________________________________
 
+    An LSTM layer with 256 units, taking input of shape (seq_length, total_chars), and returning sequences.
+    A Dropout layer with a dropout rate of 0.2.
+    Another LSTM layer with 512 units, returning sequences.
+    A second Dropout layer with a dropout rate of 0.2.
+    A third LSTM layer with 512 units.
+    A Dense layer with 512 units and ReLU activation.
+    A third Dropout layer with a dropout rate of 0.3.
+    A final Dense layer with total_chars units and softmax activation.
+
+The model is compiled with categorical crossentropy loss and an Adam optimizer with a learning rate of 0.0001.
+
+**Training parameters and funcionality**
+Parameters:
+
+    model (Keras model): The LSTM model to be trained.
+    X (array): The input data for training.
+    y (array): The target data for training.
+    X_val, y_val (arrays): The validation data.
+    epochs (int): Number of epochs for training.
+    batch_size (int): Batch size for training.
+    model_save_path (str): The path to save the trained model.
+
+Functionality:
+
+    Train function implements early stopping, monitoring validation loss with a patience of 5 epochs and restoring the best weights upon stopping.
+    It also uses a learning rate scheduler to reduce the learning rate by a factor of 0.97 with a patience of 3 epochs, based on validation loss, with a minimum learning rate set to 0.0001.
+    The model is trained with the specified X, y, X_val, y_val, epochs, and batch_size, using the defined callbacks for early stopping and learning rate scheduling.
+
 **Note:**
 - The `(None, 20, 256)` output shape represents the `seq_length` value (20).
 - The `(None, 96)` output shape of the last layer indicates the number of characters used to train the model (96).
