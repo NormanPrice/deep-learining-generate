@@ -73,6 +73,11 @@ The configuration file includes the following values:
 
 The model is compiled with categorical crossentropy loss and an Adam optimizer with a learning rate of 0.0001.
 
+**Note:**
+- The `(None, 20, 256)` output shape represents the `seq_length` value (20).
+- The `(None, 96)` output shape of the last layer indicates the number of characters used to train the model (96).
+
+
 ### Training parameters and funcionality
 
 **Training Parameters:**
@@ -91,6 +96,3 @@ The model is compiled with categorical crossentropy loss and an Adam optimizer w
     It also uses a learning rate scheduler to reduce the learning rate by a factor of 0.97 with a patience of 3 epochs, based on validation loss, with a minimum learning rate set to 0.0001.
     The model is trained with the specified X, y, X_val, y_val, epochs, and batch_size, using the defined callbacks for early stopping and learning rate scheduling.
 
-**Note:**
-- The `(None, 20, 256)` output shape represents the `seq_length` value (20).
-- The `(None, 96)` output shape of the last layer indicates the number of characters used to train the model (96).
