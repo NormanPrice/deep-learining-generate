@@ -178,7 +178,9 @@ def main(args):
 
     # Train the model
     if args.train_model:
-        model = train_model(model, X_train, y_train, X_val, y_val, args.batch_size, args.epochs, args.save_model_path)
+       # model = train_model(model, X_train, y_train, X_val, y_val, args.batch_size, args.epochs, args.save_model_path)
+            # Train the model
+         model = train_model(model, X_train, y_train,args.save_model_path)
 
         # Save the model if specified
         if args.save_model_path:
