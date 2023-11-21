@@ -100,7 +100,7 @@ Sorry for the temporary inconvinience :(
 
 **Training Functionality:**
 
-    Train function implements early stopping, monitoring validation loss with a patience of 5 epochs and restoring the best weights upon stopping.
-    It also uses a learning rate scheduler to reduce the learning rate by a factor of 0.97 with a patience of 3 epochs, based on validation loss, with a minimum learning rate set to 0.0001.
-    The model is trained with the specified X, y, X_val, y_val, epochs, and batch_size, using the defined callbacks for early stopping and learning rate scheduling.
+Train function implements early stopping, monitoring validation loss with a patience of 5 epochs and restoring the best weights upon stopping.
+It also uses a learning rate scheduler to reduce the learning rate by a factor of 0.97 with a patience of 3 epochs, based on validation loss, with a minimum learning rate set to 0.0001.
+The model is trained with the specified X, y, X_val, y_val, epochs, and batch_size, using the defined callbacks for early stopping and learning rate scheduling.
 
