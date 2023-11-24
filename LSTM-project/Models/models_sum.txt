@@ -1,0 +1,128 @@
+models:
+model-epoch-10-loss-2.07.h5
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ lstm_2 (LSTM)               (None, 25, 256)           361472    
+                                                                 
+ lstm_3 (LSTM)               (None, 25, 512)           1574912   
+                                                                 
+ lstm_4 (LSTM)               (None, 512)               2099200   
+                                                                 
+ dropout_1 (Dropout)         (None, 512)               0         
+                                                                 
+ dense_2 (Dense)             (None, 512)               262656    
+                                                                 
+ dense_3 (Dense)             (None, 96)                49248     
+                                                                 
+=================================================================
+Total params: 4347488 (16.58 MB)
+Trainable params: 4347488 (16.58 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+
+filename: ascii_printable
+seq_length = 25
+
+
+model-epoch-10-loss-1.31-10-milion-100k.h5
+Model: "sequential_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ lstm_6 (LSTM)               (None, 25, 256)           348160    
+                                                                 
+ lstm_7 (LSTM)               (None, 25, 512)           1574912   
+                                                                 
+ lstm_8 (LSTM)               (None, 512)               2099200   
+                                                                 
+ dropout_4 (Dropout)         (None, 512)               0         
+                                                                 
+ dense_4 (Dense)             (None, 512)               262656    
+                                                                 
+ dense_5 (Dense)             (None, 83)                42579     
+                                                                 
+=================================================================
+Total params: 4327507 (16.51 MB)
+Trainable params: 4327507 (16.51 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+filename: 10-million-password-list-top-100000.txt
+seq_length = 25
+
+
+model-saveLSTM-parameters11-06.h5
+Model: "sequential_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ lstm_6 (LSTM)               (None, 25, 256)           348160    
+                                                                 
+ lstm_7 (LSTM)               (None, 25, 512)           1574912   
+                                                                 
+ lstm_8 (LSTM)               (None, 512)               2099200   
+                                                                 
+ dropout_2 (Dropout)         (None, 512)               0         
+                                                                 
+ dense_4 (Dense)             (None, 512)               262656    
+                                                                 
+ dense_5 (Dense)             (None, 83)                42579     
+                                                                 
+=================================================================
+Total params: 4327507 (16.51 MB)
+Trainable params: 4327507 (16.51 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+filename: 10-million-password-list-top-100000.txt
+seq_length = 25
+
+model-epoch-10-loss-3.07.h5
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ lstm (LSTM)                 (None, 25, 256)           350208    
+                                                                 
+ lstm_1 (LSTM)               (None, 25, 512)           1574912   
+                                                                 
+ lstm_2 (LSTM)               (None, 512)               2099200   
+                                                                 
+ dropout (Dropout)           (None, 512)               0         
+                                                                 
+ dense (Dense)               (None, 512)               262656    
+                                                                 
+ dense_1 (Dense)             (None, 85)                43605     
+                                                                 
+=================================================================
+Total params: 4330581 (16.52 MB)
+Trainable params: 4330581 (16.52 MB)
+Non-trainable params: 0 (0.00 Byte)
+filename: 100k
+seq_length = 25
+
+
+model-saveLSTM.h5
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ lstm_3 (LSTM)               (None, 20, 256)           335872    
+                                                                 
+ lstm_4 (LSTM)               (None, 20, 512)           1574912   
+                                                                 
+ lstm_5 (LSTM)               (None, 512)               2099200   
+                                                                 
+ dropout_1 (Dropout)         (None, 512)               0         
+                                                                 
+ dense_2 (Dense)             (None, 512)               262656    
+                                                                 
+ dense_3 (Dense)             (None, 71)                36423     
+                                                                 
+=================================================================
+Total params: 4309063 (16.44 MB)
+Trainable params: 4309063 (16.44 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+filename: rockyou-75.txt.lower()
+seq_length = 20
