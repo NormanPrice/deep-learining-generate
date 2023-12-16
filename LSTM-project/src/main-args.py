@@ -151,6 +151,7 @@ from utils import save_text
 from sklearn.model_selection import train_test_split
 import config
 from check_ascii import remove_non_ascii_printable
+from keras.models import load_model
 
 def main(args):
     # Load and preprocess text
