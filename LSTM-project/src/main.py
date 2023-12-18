@@ -61,6 +61,3 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     main(args)
-
-#python3 main-args.py --train_model --filename /Users/norbert/Downloads/deep-learining-generate-main/LSTM-project/data/darkweb2017.txt --output_path /Users/norbert/Downloads/deep-learining-generate-main/LSTM-project/outputs/output.txt --save_model_path /Users/norbert/Downloads/deep-learining-generate-main/models/model-test.h5
-#hit_ratio = sampled_passwords_in_test_set / all_sampled_passwords
