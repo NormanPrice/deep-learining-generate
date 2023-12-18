@@ -15,7 +15,7 @@ def count_common_words(smaller_file_path, larger_file_path):
     return len(common_words)
 
 # Example usage
-smaller_file_path = '/Users/norbert/Downloads/deep-learining-generate-main/LSTM-project/outputs/newoutput_1000_25.txt'
-larger_file_path = '/Users/norbert/Downloads/deep-learining-generate-main/LSTM-project/data/10-million-password-list-top-100000.txt'
+smaller_file_path = 'smaller path'
+larger_file_path = 'bigger path'
 common_word_count = count_common_words(smaller_file_path, larger_file_path)
 print(f'Number of common words: {common_word_count}')
