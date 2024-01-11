@@ -1,2 +1,6 @@
 Models trained on tesla:
 https://drive.google.com/drive/folders/1cZtVyQaT5ElAswasJvw7oI7R5jYOhuil?usp=sharing
+
+Model trained on 100k passwords:
+https://drive.google.com/file/d/1b-Wva8MRZomdeB9R4VjSSr2JfXCfxAyG/view?usp=sharing
+filename: 10-million-password-list-top-100000.txt
