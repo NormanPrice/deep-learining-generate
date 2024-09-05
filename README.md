@@ -15,6 +15,25 @@ This project implements a console application that allows users to train and use
 ## Usage
 This app allows users to specify parameters for training via command-line arguments.
 
+## Requirements
+```
+python_version=3.11.3
+keras==2.15.0 
+tensorflow==2.15.0 
+scikit-learn==1.3.2
+```
+Please use requirements.txt when setting up virtual env
+
+## Installation
+```
+pip install virtualenv
+python3.11 -m venv <virtual-environment-name>
+source env/bin/activate
+pip install -r requirements.txt
+```
+this will ensure that correct versions of keras, tensorflow and scikit learn are installed
+
+
 ### Sample Usage for Training New Model:
 python3 main-args.py --train_model --filename /path/to/dataset/ --output_path /path/ --save_model_path /path/ --gen_text_length /length/ --gen_text_temperature /temperature/ --batch_size /batch_size/ --epochs /epochs/
 
